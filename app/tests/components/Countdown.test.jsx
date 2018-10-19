@@ -13,7 +13,7 @@ describe('Countdown', () => {
 
   describe('handleSetCountdown', () => {
     it('should set state to started and countdown', (done) => {
-      let countdown = TestUtils.renderIntoDocument(<Countdown/>);
+      const countdown = TestUtils.renderIntoDocument(<Countdown/>);
       countdown.handleSetCountdown(10);
 
       expect(countdown.state.count).toBe(10);
@@ -26,7 +26,7 @@ describe('Countdown', () => {
     });
 
     it('should never set count less than 0', (done) => {
-      let countdown = TestUtils.renderIntoDocument(<Countdown/>);
+      const countdown = TestUtils.renderIntoDocument(<Countdown/>);
       countdown.handleSetCountdown(1);
 
       setTimeout(() => {
